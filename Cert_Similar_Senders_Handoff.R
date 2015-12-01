@@ -46,7 +46,7 @@ for(i in 1:dim(cert_df)[1]){
     cos_scale_df <- rbind(cos_scale_df, results_final)
   }
 }
-save(cos_scale_df, file = "cos_scale_df_final.RData")
+#save(cos_scale_df, file = "cos_scale_df_final.RData")
 
 
 #*************************************************
@@ -116,7 +116,7 @@ disp_df <- rbind(disp, disp_Avg)
 #******  Getting data for Daily Results:  ********
 #*************************************************
 
-#oib_cert_ips_data <- sqlQuery(hive, "select * from acase.oib_cert_ips_data")
+oib_cert_ips_data <- sqlQuery(hive, "select * from acase.oib_cert_ips_data")
 #this can be pre-limited to just the IPS of interested, or just the ones with results
 
 #subseting to only relevant results:
